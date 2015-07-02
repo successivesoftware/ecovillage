@@ -1,0 +1,37 @@
+.page.whats-cooking {
+  .content-scrollable { padding-top: 3em; }
+
+  .list-activities {
+    .transition(all 700ms ease-in);
+  }
+  .list-activities.loading {
+    min-height: 100%;
+    .icon-sync {
+      .animation(spin 2s infinite linear);
+      margin-bottom: .5em;
+    }
+    .title-message {
+      .font-s3;
+      .title-caps;
+      .type-black;
+      color: @color-medium-rare;
+    }
+  }
+}
+.thubnails {
+  margin-left: 10px;
+  border-radius: 10em;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+}
+.posts{
+  float: left;
+}
+.text {
+  font-size: 13px;
+  margin-top: 11px;
+  margin-left: 52px
+}

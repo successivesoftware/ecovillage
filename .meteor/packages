@@ -1,0 +1,45 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+# Packages from the release:
+
+meteor-platform
+less
+email
+http
+jquery-waypoints
+fastclick
+accounts-twitter
+service-configuration
+oauth1
+launch-screen
+
+# Packages from Atmosphere:
+tmeasday:publish-counts@0.3.1
+iron:router@0.9.4
+percolate:velocityjs
+percolate:wireframing
+mdg:camera
+mdg:geolocation
+pagebakers:ionicons
+jonblum:jquery-cropper@0.7.5
+semantic:ui-css
+semantic:ui-button
+#jparker:crypto-base64
+base64
+random
+jquery
+semantic:ui-modal
+#rzymek:fullcalendar
+gquemart:meteor-reactive-fullcalendar
+semantic:ui-menu
+semantic:ui
+semantic:ui-dropdown
+linto:jquery-ui@1.8.18
+twbs:bootstrap
+ian:accounts-ui-bootstrap-3
+accounts-password
+accounts-github

@@ -1,0 +1,107 @@
+<template name="appBody">
+  <div id="" class="{{menuOpen}} {{overlayOpen}}">
+    <section id="menu" class="overthrow">
+      <a href="{{pathFor 'home'}}" class="{{activePage 'home'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-home"></span>
+          <span class="title-menu">Home</span>
+        </span>
+      </a>
+      <a href="{{pathFor 'feed'}}" class="{{activePage 'feed'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-rss"></span>
+          <span class="title-menu">What's<br>Cooking</span>
+        </span>
+      </a>
+      <a href="{{pathFor 'recipes'}}" class="{{activePage 'recipes' 'recipe'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-category"></span>
+          <span class="title-menu">Recipes</span>
+        </span>
+      </a>
+      <a href="{{pathFor 'bookmarks'}}" class="{{activePage 'bookmarks'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-bookmark-hollow"></span>
+          <span class="title-menu">Bookmarks</span>
+        </span>
+      </a>
+
+        <a href="{{pathFor 'shareOverlay'}}" class="{{activePage 'shareOverlay'}}">
+        <span class="wrapper-menu-item">
+         <span  class="ion-camera ionicons" data-pack="default" data-tags="food, drink, eat, caffeine"></span>
+          <span class="title-menu">Share Post</span>
+        </span>
+        </a>
+
+        <a href="{{pathFor 'calendar'}}" class="{{activePage 'calendar'}}">
+        <span class="wrapper-menu-item">
+         <span  class="ion-calendar ionicons" data-pack="default" data-tags="food, drink, eat, caffeine"></span>
+          <span class="title-menu">Calendar</span>
+        </span>
+        </a>
+
+        <a href="{{pathFor 'food'}}" class="{{activePage 'food'}}">
+        <span class="wrapper-menu-item">
+         <span  class="ion-coffee ionicons" data-pack="default" data-tags="food, drink, eat, caffeine"></span>
+          <span class="title-menu">Food</span>
+        </span>
+        </a>
+
+        <a href="{{pathFor 'groceries'}}" class="{{activePage 'groceries'}}">
+        <span class="wrapper-menu-item">
+          <span class="ion-ios-cart ionicons" data-pack="ios" data-tags="shopping, money, items, commerce, $"></span>
+          <span class="title-menu">Groceries</span>
+        </span>
+        </a>
+
+        <a href="{{pathFor 'trade'}}" class="{{activePage 'trade'}}">
+        <span class="wrapper-menu-item">
+          <span class="ion-arrow-graph-up-right ionicons" data-pack="default" data-tags="stats"></span>
+          <span class="title-menu">Trade</span>
+        </span>
+        </a>
+
+        <a href="{{pathFor 'event'}}" class="{{activePage 'event'}}">
+           <span class="wrapper-menu-item">
+           <span class="ion-calendar ionicons" data-pack="default" data-tags="date, time, month, year"></span>
+            <span class="title-menu">Event</span>
+          </span>
+        </a>
+
+        <a href="{{pathFor 'appointment'}}" class="{{activePage 'appointment'}}">
+          <span class="wrapper-menu-item">
+            <span class="ion-clock ionicons" data-pack="default" data-tags="time, watch, hours, minutes, seconds"></span>
+            <span class="title-menu">Appointment</span>
+          </span>
+        </a>
+
+      <a href="{{pathFor 'about'}}" class="{{activePage 'about'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-question"></span>
+          <span class="title-menu">About</span>
+        </span>
+      </a>
+    </section>
+
+      <div class="notifications">
+        {{#unless connected}}
+          <div class="notification">
+            <span class="icon-sync"></span>
+            <div class="title-notification">Trying to connect</div>
+          </div>
+        {{/unless}}
+        {{#each notifications}}
+          <div class="notification">
+            <a class="btn-primary js-notification-action">{{action}}</a>
+            <div class="title-notification">{{title}}</div>
+          </div>
+        {{/each}}
+      </div>
+    {{> overlay}}
+    <div class="content-overlay"></div>
+
+    <div id="content-container">
+      {{> yield}}
+    </div>
+  </div>
+</template>
